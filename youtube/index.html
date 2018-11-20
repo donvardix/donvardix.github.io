@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <title>Достать превью из видео</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="form1" class="container">
+      
+      <h1>Достать превью из видео</h1>
+
+      <div class="alert alert-warning" role="alert">
+        https://www.youtube.com/watch?v=<b>9bZkp7q19f0</b>
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">id видео:</span>
+        </div>
+        <input id="video_id" type="text" class="form-control" placeholder="Например: 9bZkp7q19f0" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+      <img id="preview" src="//img.youtube.com/vi/a/mqdefault.jpg" class="rounded mx-auto d-block" alt="Превью">
+
+      <h5>1280x720(максимальное разрешение):</h5>
+      <div class="input-group">
+        <input id="maxresdefault" type="text" class="form-control" placeholder="..." aria-describedby="button-addon4">
+        <div class="input-group-append" id="button-addon4">
+          <button class="btn btn-outline-secondary" type="button" onclick="copy('maxresdefault')">Скопировать</button>
+          <button id="open_irl" class="btn btn-outline-secondary" type="button" onclick="window.open(document.getElementById('maxresdefault').value,'_blank')">Открыть картинку в новой вкладке</button>
+        </div>
+      </div><br>
+
+
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-secondary btn-lg btn-block" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Открыть ещё
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <h5>640x480:</h5>
+        <div class="input-group">
+          <input id="sddefault" type="text" class="form-control" placeholder="..." aria-describedby="button-addon4">
+          <div class="input-group-append" id="button-addon4">
+            <button class="btn btn-outline-secondary" type="button" onclick="copy('sddefault')">Скопировать</button>
+            <button class="btn btn-outline-secondary" type="button" onclick="window.open(document.getElementById('sddefault').value,'_blank')">Открыть картинку в новой вкладке</button>
+          </div>
+        </div><hr>
+
+        <h5>480x360:</h5>
+        <div class="input-group">
+          <input id="hqdefault" type="text" class="form-control" placeholder="..." aria-describedby="button-addon4">
+          <div class="input-group-append" id="button-addon4">
+            <button class="btn btn-outline-secondary" type="button" onclick="copy('hqdefault')">Скопировать</button>
+            <button class="btn btn-outline-secondary" type="button" onclick="window.open(document.getElementById('hqdefault').value,'_blank')">Открыть картинку в новой вкладке</button>
+          </div>
+        </div><hr>
+
+        <h5>320x180:</h5>
+        <div class="input-group">
+          <input id="mqdefault" type="text" class="form-control" placeholder="..." aria-describedby="button-addon4">
+          <div class="input-group-append" id="button-addon4">
+            <button class="btn btn-outline-secondary" type="button" onclick="copy('mqdefault')">Скопировать</button>
+            <button class="btn btn-outline-secondary" type="button" onclick="window.open(document.getElementById('mqdefault').value,'_blank')">Открыть картинку в новой вкладке</button>
+          </div>
+        </div><hr>
+
+        <h5>120x90:</h5>
+        <div class="input-group">
+          <input id="default" type="text" class="form-control" placeholder="..." aria-describedby="button-addon4">
+          <div class="input-group-append" id="button-addon4">
+            <button class="btn btn-outline-secondary" type="button" onclick="copy('default')">Скопировать</button>
+            <button class="btn btn-outline-secondary" type="button" onclick="window.open(document.getElementById('default').value,'_blank')">Открыть картинку в новой вкладке</button>
+          </div>
+        </div><hr>
+        
+        <h5>Кадры из видео(120x90):</h5>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Кадр №1</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Кадр №2</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Кадр №3</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <img id="preview1" src="//img.youtube.com/vi/a/mqdefault.jpg" class="rounded mx-auto d-block" alt="Превью">
+    <div class="input-group">
+      <input id="1" type="text" class="form-control" placeholder="..." aria-describedby="button-addon4">
+      <div class="input-group-append" id="button-addon4">
+        <button class="btn btn-outline-secondary" type="button" onclick="copy('1')">Скопировать</button>
+        <button class="btn btn-outline-secondary" type="button" onclick="window.open(document.getElementById('1').value,'_blank')">Открыть картинку в новой вкладке</button>
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <img id="preview2" src="//img.youtube.com/vi/a/mqdefault.jpg" class="rounded mx-auto d-block" alt="Превью">
+    <div class="input-group">
+      <input id="2" type="text" class="form-control" placeholder="..." aria-describedby="button-addon4">
+      <div class="input-group-append" id="button-addon4">
+        <button class="btn btn-outline-secondary" type="button" onclick="copy('2')">Скопировать</button>
+        <button class="btn btn-outline-secondary" type="button" onclick="window.open(document.getElementById('2').value,'_blank')">Открыть картинку в новой вкладке</button>
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+    <img id="preview3" src="//img.youtube.com/vi/a/mqdefault.jpg" class="rounded mx-auto d-block" alt="Превью">
+    <div class="input-group">
+      <input id="3" type="text" class="form-control" placeholder="..." aria-describedby="button-addon4">
+      <div class="input-group-append" id="button-addon4">
+        <button class="btn btn-outline-secondary" type="button" onclick="copy('3')">Скопировать</button>
+        <button class="btn btn-outline-secondary" type="button" onclick="window.open(document.getElementById('3').value,'_blank')">Открыть картинку в новой вкладке</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+    
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- MY JS -->
+    <script>
+      function copy(e){
+        document.getElementById(e).select();
+        document.execCommand('copy');
+        
+      }
+    </script>
+
+
+    <script>
+      var f = document.getElementById('form1');
+      f.onchange = f.onkeyup = function() {
+        var id = document.getElementById('video_id').value; 
+        document.getElementById('maxresdefault').value = "https://img.youtube.com/vi/" + id + "/maxresdefault.jpg";
+        document.getElementById('preview').src = "https://img.youtube.com/vi/" + id + "/mqdefault.jpg";
+        document.getElementById('sddefault').value = "https://img.youtube.com/vi/" + id + "/sddefault.jpg";
+        document.getElementById('hqdefault').value = "https://img.youtube.com/vi/" + id + "/hqdefault.jpg";
+        document.getElementById('mqdefault').value = "https://img.youtube.com/vi/" + id + "/mqdefault.jpg";
+        document.getElementById('default').value = "https://img.youtube.com/vi/" + id + "/default.jpg";
+        document.getElementById('preview1').src = "https://img.youtube.com/vi/" + id + "/1.jpg";
+        document.getElementById('1').value = "https://img.youtube.com/vi/" + id + "/1.jpg";
+        document.getElementById('preview2').src = "https://img.youtube.com/vi/" + id + "/2.jpg";
+        document.getElementById('2').value = "https://img.youtube.com/vi/" + id + "/2.jpg";
+        document.getElementById('preview3').src = "https://img.youtube.com/vi/" + id + "/3.jpg";
+        document.getElementById('3').value = "https://img.youtube.com/vi/" + id + "/3.jpg";
+
+      }
+    </script>
+  </body>
+</html>
